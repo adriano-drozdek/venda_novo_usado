@@ -3,7 +3,7 @@ package entities;
 public class Produto {
 
 	private String nome;
-	private Double preco;
+	protected Double preco;
 
 	public Produto() {
 		super();
