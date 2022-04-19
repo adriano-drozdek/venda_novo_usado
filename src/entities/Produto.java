@@ -30,4 +30,10 @@ public class Produto {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
+	
+	public String precoTag() {
+		return nome 
+				+ " $ " 
+				+ String.format("%.2f", preco);
+	}
 }

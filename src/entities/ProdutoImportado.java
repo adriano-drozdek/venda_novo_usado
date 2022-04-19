@@ -21,7 +21,18 @@ public class ProdutoImportado extends Produto {
 		this.custoAlfandega = custoAlfandega;
 	}
 
-	public double valorTotal() {
-		 return preco + custoAlfandega;
+	public Double valorTotal() {
+		 return getPreco() + custoAlfandega;
+	}
+	
+
+	@Override
+	public String precoTag() {
+		return getNome() 
+				+ " $ " 
+				+ String.format("%.2f", valorTotal())
+				+ " (Custo com alfandega: $ " 
+				+ String.format("%.2f", custoAlfandega)
+				+ ")";
 	}
 }
